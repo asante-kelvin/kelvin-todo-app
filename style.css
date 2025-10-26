@@ -1,0 +1,269 @@
+:root {
+            --color-indigo-glow: #6366f1;
+            --color-dark: #1e293b;
+            --color-gray-bg: #f3f4f6;
+            --color-text-light: #9ca3af;
+            --color-border: #d1d5db;
+        }
+
+body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-gray-bg);
+            min-height: 100vh;
+            display: flex;
+            align-items: center; 
+            justify-content: center; 
+            padding: 1rem; 
+        }
+
+       .app-container {
+            width: 100%;
+            max-width: 500px;
+            background-color: white;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-radius: 0.75rem; 
+            overflow: hidden;
+        }
+
+        /* --- HEADER STYLES --- */
+        .app-header {
+            padding: 1rem; 
+            background-color: var(--color-dark); 
+            color: white;
+            border-top-left-radius: 0.75rem;
+            border-top-right-radius: 0.75rem;
+        }
+        .app-header h1 {
+            font-size: 1.875rem; 
+            font-weight: 700; 
+            letter-spacing: -0.010em; 
+        }
+        .app-header p {
+            color: var(--color-text-light); 
+            margin-top: 0.25rem; 
+        }
+
+        /* --- INPUT SECTION STYLES --- */
+        .input-section {
+            padding: 1.5rem; 
+            border-bottom: 1px solid #e5e7eb; 
+        }
+        .input-section label {
+            display: block;
+            font-size: 0.875rem; 
+            font-weight: 500; 
+            color: #4b5563; 
+            margin-bottom: 0.5rem; 
+        }
+
+        /* --- TEXT AREA & GLOW EFFECT --- */
+        .task-textarea {
+            width: 100%;
+            padding: 0.35rem; 
+            border: 1px solid var(--color-border); 
+            border-radius: 0.5rem; 
+            transition: all 0.3s ease-in-out;
+            resize: none;
+        }
+
+         .task-textarea-2{
+            margin-top: 1.5rem;
+            width: 100%;
+            padding: 0.100rem; 
+            border: 1px solid var(--color-border); 
+            border-radius: 0.5rem; 
+            transition: all 0.3s ease-in-out;
+            resize: none;
+        }
+
+        .task-textarea:focus {
+            /* The Custom Glow Effect */
+            outline: none; 
+            border-color: var(--color-indigo-glow); 
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.5); 
+        }
+
+        .task-textarea-2:focus {
+            /* The Custom Glow Effect */
+            outline: none; 
+            border-color: var(--color-indigo-glow); 
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.5); 
+        }
+        
+        /* --- BUTTON STYLES --- */
+        .add-button {
+            margin-top: 0.75rem;
+            width: 100%; 
+            padding: 0.5rem 1rem; 
+            background-color: var(--color-indigo-glow); 
+            color: white;
+            font-weight: 600; 
+            border-radius: 0.5rem; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06); 
+            transition: background-color 0.15s ease-in-out; 
+            cursor: pointer;
+            border: none; /* Ensure no default button border */
+        }
+        .add-button:hover {
+            background-color: #4f46e5;
+        }
+        .add-button:focus {
+            outline: none; 
+            box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--color-indigo-glow);
+        }
+
+            .add-button-2 {
+            margin-top: 0.75rem;
+            margin-bottom: 1rem;
+            margin-left: 110px;
+            width: 50%;
+            padding: 0.5rem 0.5rem; 
+            background-color: red; 
+            color: white;
+            font-weight: 600; 
+            border-radius: 0.5rem; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06); 
+            transition: background-color 0.15s ease-in-out; 
+            cursor: pointer;
+            border: none; /* Ensure no default button border */
+        }
+        .add-button-2:hover {
+            background-color: #4f46e5;
+        }
+        .add-button-2:focus {
+            outline: none; 
+            box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--color-indigo-glow);
+        }
+
+        /* --- LIST STYLES --- */
+        .task-list {
+            padding: 1.5rem; 
+            list-style: none; /* Remove default list style */
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .name {
+            font-size: 1.125rem; 
+            font-weight: 600; 
+            color: #1f2937; 
+            margin-bottom: 1rem;
+        }
+        .task-list ul {
+            padding: 0;
+            margin: 0;
+        }
+        .task-item {
+            padding: 0.75rem;
+            cursor: pointer;
+            background-color: #f9fafb; 
+            border: 1px solid #e5e7eb; 
+            border-radius: 0.5rem; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem; /* spacing between items */
+        }
+        
+        /* Demo States */
+        .task-item.done {
+    
+            text-decoration:none;
+        }
+        .task-tag {
+            font-size:1rem; 
+            font-weight: 500;
+        }
+
+         .task-tag.done-tag:hover{
+            transition: all 100ms ease-in;
+            color: #0a255f;
+        }
+      
+        .task-tag.done-tag {
+            color: #10b981; /* green-500 */
+        }
+
+        .delete{
+            color: red;
+            border: none;
+            background-color: white;
+            cursor: pointer;
+            font-size:1.4rem;
+        }
+
+        .delete:hover{
+            transition: all 100ms ease-in;
+            color: #45e27a;
+        }
+
+
+
+        /* ========== RESPONSIVE DESIGN ========== */
+
+/* For small screens like phones */
+@media (max-width: 600px) {
+    body {
+        padding: 0.5rem;
+    }
+
+    .app-container {
+        max-width: 100%;
+        border-radius: 0.5rem;
+    }
+
+    .app-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .app-header p {
+        font-size: 0.85rem;
+    }
+
+    .task-textarea,
+    .task-textarea-2 {
+        font-size: 0.9rem;
+        padding: 0.4rem;
+    }
+
+    .add-button {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .add-button-2 {
+        width: 80%;
+        margin-left: 10%;
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .task-item {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 0.95rem;
+    }
+
+    .delete {
+        font-size: 1.2rem;
+        align-self: flex-end;
+    }
+}
+
+/* For tablets */
+@media (min-width: 601px) and (max-width: 900px) {
+    .app-container {
+        max-width: 600px;
+    }
+
+    .add-button-2 {
+        width: 60%;
+        margin-left: 20%;
+    }
+}
+
+/* For large screens */
+@media (min-width: 901px) {
+    .app-container {
+        max-width: 600px;
+    }
+}

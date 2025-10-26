@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Project</title>
+    <link rel="stylesheet" href="style.css">
+    <script  type="module" src="script.js"></script>
+</head>
+<body>
+   
+     <div class="app-container">
+        
+        <!-- Header -->
+        <header class="app-header">
+            <h1>Asante's To-Do-list Applicaiton</h1>
+            <p>Please Add a Tasks </p>
+        </header>
+
+        <!-- To-Do Input Section -->
+        <div id="input-section" class="input-section">
+            <label for="taskInput">What needs to be done?</label>
+            
+            <!-- The Glowing Text Area (now using only one class for presentation) -->
+            <textarea
+                id="taskInput"
+                placeholder="Enter a new task..."
+                rows="3"
+                class="task-textarea"
+            ></textarea>
+
+            <button id="addTaskButton" class="add-button">
+                Add Task
+            </button>
+
+            <textarea
+                id="filter"
+                placeholder="Search..."
+                rows="3"
+                class="task-textarea-2"
+            ></textarea>
+
+        </div>
+
+        <!-- Task List Placeholder -->
+        <div class="task-list">
+            <h2 class='name'>Asante's List</h2>
+            <ul id="taskList">
+              
+            </ul>
+        </div>
+
+        <div>
+            <button id="clearButton" class="add-button-2">
+                Clear
+            </button>
+        </div>
+        
+    </div>
+
+
+</body>
+</html>
